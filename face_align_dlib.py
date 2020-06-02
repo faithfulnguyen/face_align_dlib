@@ -212,6 +212,6 @@ if __name__ == '__main__':
     detector = dlib.get_frontal_face_detector()
     predictor = dlib.shape_predictor(predictor_path)
     detect_face_use_dlib(
-        face_file_path, detector, predictor,
+        face_file_path, detector, predictor, image_size = 128,
         output_dir = "./", file_name="image.jpg"
     )
