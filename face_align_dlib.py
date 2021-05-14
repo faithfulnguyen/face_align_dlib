@@ -7,6 +7,13 @@ import cv2
 import math
 import os
 
+def list_all_img(folder):
+    all_file = []
+    for root, dirs, files in os.walk(folder, topdown=False):
+        for name in files:
+            path_file_name = os.path.join(root, name)
+            all_file.append(path_file_name)
+    return all_file
 
 def calc_coordinates_after_rotate(xn, yn, w, h, angle, eyes_center):
     theta = angle * math.pi / 180.0
